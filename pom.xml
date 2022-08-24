@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.optaplanner</groupId>
+    <artifactId>optaplanner-build-parent</artifactId>
+    <version>8.26.0.Final</version>
+    <relativePath/>
+  </parent>
+
+  <artifactId>2022-community-central-school-timetabling</artifactId>
+  <packaging>pom</packaging>
+  <name>OptaPlanner 2022 Community Central School Timetabling Demo</name>
+
+  <modules>
+    <module>brute-force-timetabling</module>
+    <module>greedy-timetabling</module>
+    <module>optaplanner-timetabling</module>
+  </modules>
+
+  <repositories>
+    <!-- To get snapshots during development. Remove this in the "stable" branch (which doesn't use snapshots). -->
+    <repository>
+      <id>jboss-public-repository-group</id>
+      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+      <releases>
+        <!-- Get releases only from Maven Central which is faster. -->
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+</project>

@@ -1,0 +1,42 @@
+= OptaPlanner Community Central demo
+
+== Overview of all Modules
+
+. `brute-force-timetabling` Quarkus application that uses custom
+implementation of the algorithm to come over all
+the combinations of subjects
+and timeslots and searches the best solution
+
+. `greedy-timetabling` Quarkus application that uses custom greedy implementation
+and picks the best solution of all each time.
+
+. `optaplanner-timetabling` uses constraints and different optimization
+to search for the best solution in reasonable time.
+
+== Get started
+
+. https://adoptopenjdk.net[Install JDK 11 or later] with `JAVA_HOME` configured appropriately.
+
+. Clone this repository to build showcase:
++
+[source, shell]
+----
+$ git clone https://github.com/dupliaka/2022-community-central-school-timetabling.git
+$ cd 2022-community-central-school-timetabling
+$ mvn clean install
+----
+
+== Use case
+
+[[school-timetabling]]
+=== School timetabling
+
+Assign lessons to timeslots and rooms to produce a better schedule for teachers and students.
+
+image::quarkus-school-timetabling-screenshot.png[]
+[]
+
+
+== More information
+
+Learn more on https://www.optaplanner.org/[www.optaplanner.org].
