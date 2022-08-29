@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver xmlns="https://www.optaplanner.org/xsd/solver" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.optaplanner.org/xsd/solver https://www.optaplanner.org/xsd/solver/solver.xsd">
+  <constructionHeuristic>
+    <constructionHeuristicType>FIRST_FIT</constructionHeuristicType>
+  </constructionHeuristic>
+  <localSearch>
+    <termination>
+      <unimprovedMillisecondsSpentLimit>10</unimprovedMillisecondsSpentLimit>
+    </termination>
+    <acceptor>
+      <simulatedAnnealingStartingTemperature>2hard/100soft</simulatedAnnealingStartingTemperature>
+    </acceptor>
+    <forager>
+      <acceptedCountLimit>4</acceptedCountLimit>
+    </forager>
+  </localSearch>
+</solver>
