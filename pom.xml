@@ -15,8 +15,6 @@
   <name>OptaPlanner 2022 Community Central School Timetabling Demo</name>
 
   <modules>
-    <module>brute-force-timetabling</module>
-    <module>greedy-timetabling</module>
     <module>optaplanner-timetabling</module>
   </modules>
 

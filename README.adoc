@@ -1,29 +1,20 @@
 = OptaPlanner Community Central demo
 
-== Overview of all Modules
-
-. `brute-force-timetabling` Quarkus application that uses custom
-implementation of the algorithm to come over all
-the combinations of subjects
-and timeslots and searches the best solution
-
-. `greedy-timetabling` Quarkus application that uses custom greedy implementation
-and picks the best solution of all each time.
-
-. `optaplanner-timetabling` uses constraints and different optimization
+`optaplanner-timetabling` uses constraints and different optimization
 to search for the best solution in reasonable time.
 
 == Get started
 
 . https://adoptopenjdk.net[Install JDK 11 or later] with `JAVA_HOME` configured appropriately.
+. https://maven.apache.org[Install Maven 3 or later].
 
 . Clone this repository to build showcase:
 +
 [source, shell]
 ----
 $ git clone https://github.com/dupliaka/2022-community-central-school-timetabling.git
-$ cd 2022-community-central-school-timetabling
-$ mvn clean install
+$ cd 2022-community-central-school-timetabling/optaplanner-timetabling
+$ mvn clean quarkus:dev
 ----
 
 == Use case
@@ -36,6 +27,16 @@ Assign lessons to timeslots and rooms to produce a better schedule for teachers 
 image::quarkus-school-timetabling-screenshot.png[]
 []
 
+== How to add lessons?
+Use DemoDataGenerator.class
+
+== How to change constraints?
+Use TimeTableConstraintProvider.class to edit the constraints.
+
+==== Some tips how to start with that:
+- First join lessons with themselves by time or whatever variable you are interested in as if it was a SQL request.
+- Next define the filtering cause which of the cases you want to penalize.
+- Then think about what kind a constraints you want to add Hard or Soft. Is the rule obligatory or not?
 
 == More information
 
